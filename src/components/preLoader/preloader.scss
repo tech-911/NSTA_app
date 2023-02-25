@@ -1,0 +1,13 @@
+.preloader_wrapper {
+  background: #fff1da9c;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}

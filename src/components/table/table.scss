@@ -1,0 +1,82 @@
+@media screen and (min-width: 1400px) {
+  .table_table::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+.table_wrapper {
+  .table_widget {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    .table_header_text_shadow {
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.47);
+    }
+    .table_table {
+      @media screen and (max-width: 587px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      &::-webkit-scrollbar {
+        background: #fcefec;
+        border-radius: 8px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #e0e0e0;
+        border-radius: 8px;
+        border: 2px solid #fcefec;
+        &:hover {
+          background-color: #d4c2c2;
+        }
+      }
+      .table_title {
+        grid-template-columns: repeat(11, minmax(0, 1fr));
+        justify-items: center;
+        width: 100%;
+        font-family: "Inter";
+        @media screen and (max-width: 1400px) {
+          width: 1000px;
+        }
+      }
+      .table_content {
+        width: 100%;
+        @media screen and (max-width: 1400px) {
+          width: 1000px;
+        }
+        .table_item1 {
+          * {
+            font-family: "Inter";
+          }
+          grid-template-columns: repeat(11, minmax(0, 1fr));
+          justify-items: center;
+        }
+        .table_pending {
+          &:hover {
+            background-color: #efebfb;
+            * {
+              color: #714dd9;
+            }
+          }
+        }
+        .table_accepted {
+          &:hover {
+            background-color: #ecf9e6;
+            * {
+              color: #52c41a;
+            }
+          }
+        }
+        .table_declined {
+          &:hover {
+            background-color: #ffebec;
+            * {
+              color: #ff4d4f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

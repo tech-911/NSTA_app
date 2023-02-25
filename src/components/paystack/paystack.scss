@@ -1,0 +1,95 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin paystack_form_label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(30, 30, 30, 0.8);
+  margin-bottom: 0.5rem;
+}
+@mixin paystack_form_input {
+  background: #dbd3d2;
+  border-radius: 10px;
+  padding: 1rem;
+  &:focus {
+    outline: 2px solid rgba(223, 105, 81, 0.57);
+  }
+  &::placeholder {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(30, 30, 30, 0.44);
+  }
+}
+
+.paystack_wrapper {
+  padding: 2rem;
+  .paystack_form {
+    @include flex-col;
+    background: #ffffff;
+    box-shadow: 0px 4px 28px rgba(51, 51, 51, 0.05);
+    border-radius: 16px;
+    padding: 3rem 2rem 3rem;
+    .paystack_form_heading {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 22px;
+      color: #df6951;
+      margin-bottom: 2rem;
+    }
+    .paystack_name {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .paystack_name_label {
+        @include paystack_form_label;
+      }
+      .paystack_name_input {
+        @include paystack_form_input;
+      }
+    }
+    .paystack_email {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .paystack_email_label {
+        @include paystack_form_label;
+      }
+      .paystack_email_input {
+        @include paystack_form_input;
+      }
+    }
+    .paystack_amount {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .paystack_amount_label {
+        @include paystack_form_label;
+      }
+      .paystack_amount_input {
+        @include paystack_form_input;
+      }
+    }
+    .paystack_button {
+      
+      margin-top: 2rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      color: #f3f3f3;
+      padding: 1rem 3rem;
+      background: #df6951;
+      border-radius: 10px;
+    }
+  }
+}

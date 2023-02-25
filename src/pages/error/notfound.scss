@@ -1,0 +1,79 @@
+.error_wrapper {
+  position: relative;
+  width: 100vw;
+  .error_leftLanding {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+  }
+  .error_rightLanding {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  .error_body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+
+    @media screen and (max-width: 1062px) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .error_content {
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 4rem;
+      margin-bottom: 16rem;
+      @media screen and (max-width: 920px) {
+        flex-direction: column;
+      }
+      .error_text_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 4rem;
+        @media screen and (max-width: 920px) {
+          align-items: center;
+          margin-left: unset;
+          margin-top: 2rem;
+        }
+        .error_text1,
+        .error_text2 {
+          font-family: "Volkhov";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 45px;
+          line-height: 60px;
+          text-transform: capitalize;
+          color: #14183e;
+          text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+          @media screen and (max-width: 920px) {
+            text-align: center;
+          }
+        }
+        .error_text_button {
+          font-family: "Volkhov";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 49px;
+          text-align: center;
+          color: #ffffff;
+          background: #f1a501;
+          box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+          border-radius: 10px;
+          padding: 0.1rem 1.5rem;
+          margin-top: 1rem;
+          @media screen and (max-width: 920px) {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

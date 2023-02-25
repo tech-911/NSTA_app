@@ -1,0 +1,112 @@
+.subscribe_wrapper {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 1062px) {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  @media screen and (max-width: 720px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dfd7f9;
+  //   opacity: 0.2;
+  border-radius: 129px 20px 20px 20px;
+  padding: 3rem 6rem;
+  @media screen and (max-width: 720px) {
+    border-radius: 0px;
+    padding: 3rem;
+  }
+
+  .subscribe_header {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #5e6282;
+  }
+  .subscribe_leftspiral {
+    position: absolute;
+    bottom: 0rem;
+    left: 1rem;
+    z-index: -0;
+  }
+  .subscribe_rightspiral {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -0;
+  }
+  .subscribe_input_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+    width: 80%;
+    @media screen and (max-width: 930px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
+    .subscribe_input_content {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 78%;
+      @media screen and (max-width: 720px) {
+        width: 100%;
+      }
+      .subscribe_input_icon {
+        margin-right: 0.5rem;
+        color: #39425d;
+        font-size: 20px;
+      }
+      .subscribe_input {
+        outline: none;
+        width: 100%;
+
+        &::placeholder {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #39425d;
+        }
+      }
+    }
+    .subscribe_input_button {
+      background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 23px;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 1rem;
+      z-index: 1;
+      @media screen and (max-width: 720px) {
+        margin-top: 1rem;
+        align-self: flex-start;
+        margin-left: unset;
+        width: 100%;
+      }
+    }
+  }
+}

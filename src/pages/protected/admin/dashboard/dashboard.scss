@@ -1,0 +1,147 @@
+@media screen and (min-width: 1400px) {
+  .logs_table::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+@mixin HUD {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  @media screen and (max-width: 564px) {
+    align-items: center;
+  }
+}
+@mixin HUD_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 15px;
+  color: #515352;
+  margin-bottom: 1rem;
+}
+@mixin HUD_no {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.logs_wrapper {
+  .admindashboard_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 0.8);
+    margin: 0rem 0rem 2rem;
+  }
+  .dashboard_HUD {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    @media screen and (max-width: 564px) {
+      flex-direction: column;
+    }
+    margin-bottom: 2rem;
+    .dashboard_HUD_item1,
+    .dashboard_HUD_item2,
+    .dashboard_HUD_item3 {
+      @include HUD;
+      .dashboard_HUD_item1_text,
+      .dashboard_HUD_item2_text,
+      .dashboard_HUD_item3_text {
+        @include HUD_text;
+      }
+      .dashboard_HUD_item1_no,
+      .dashboard_HUD_item2_no,
+      .dashboard_HUD_item3_no {
+        @include HUD_no;
+      }
+    }
+  }
+  .logs_empty_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    .logs_empty_text {
+      margin-top: 1rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 160%;
+      color: #333333;
+      text-align: center;
+    }
+  }
+
+  .logs_widget {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    .logs_header_text_shadow {
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.47);
+    }
+    .logs_table {
+      @media screen and (max-width: 587px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      &::-webkit-scrollbar {
+        background: #e0e0e0;
+        border-radius: 8px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #df69518c;
+        border-radius: 8px;
+        border: 2px solid #e0e0e0;
+        &:hover {
+          background-color: #df6951;
+        }
+      }
+      .logs_title {
+        grid-template-columns: repeat(11, minmax(0, 1fr));
+        justify-items: center;
+        width: 100%;
+        font-family: "Inter";
+        @media screen and (max-width: 1400px) {
+          width: 1000px;
+        }
+      }
+      .logs_content {
+        width: 100%;
+        @media screen and (max-width: 1400px) {
+          width: 1000px;
+        }
+        .logs_item1 {
+          * {
+            font-family: "Inter";
+          }
+          grid-template-columns: repeat(11, minmax(0, 1fr));
+          justify-items: center;
+          &:hover {
+            background-color: #fcefec;
+            * {
+              color: #7e7d7db6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

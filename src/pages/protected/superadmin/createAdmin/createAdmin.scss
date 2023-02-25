@@ -1,0 +1,150 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin form_label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(30, 30, 30, 0.8);
+  margin-bottom: 0.5rem;
+}
+@mixin form_input {
+  background: #dbd3d2;
+  border-radius: 10px;
+  padding: 1rem;
+  &:focus {
+    outline: 2px solid rgba(223, 105, 81, 0.57);
+  }
+  &::placeholder {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(30, 30, 30, 0.44);
+  }
+}
+
+.createadmin_wrapper {
+  .superadmincreate_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 0.8);
+    margin: 0rem 0rem 2rem;
+  }
+  // height: 100%;
+  padding: 2rem;
+  .createadmin_form {
+    @include flex-col;
+    .createadmin_name {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .createadmin_name_label {
+        @include form_label;
+      }
+      .createadmin_name_input {
+        @include form_input;
+      }
+    }
+    .createadmin_email {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .createadmin_email_label {
+        @include form_label;
+      }
+      .createadmin_email_input {
+        @include form_input;
+      }
+    }
+    .createadmin_password {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .createadmin_password_label {
+        @include form_label;
+      }
+      .createadmin_password_input {
+        appearance: none;
+        @include form_input;
+      }
+    }
+    .createadmin_no {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .createadmin_no_label {
+        @include form_label;
+      }
+      .createadmin_no_input {
+        @include form_input;
+      }
+    }
+    .createadmin_more_wrapper {
+      margin-bottom: 2rem;
+      @include flex-row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      @media screen and (max-width: 575px) {
+        @include flex-col;
+      }
+      .createadmin_time {
+        width: 100%;
+        @include flex-col;
+        .createadmin_time_label {
+          @include form_label;
+        }
+        .createadmin_time_input {
+          @include form_input;
+        }
+      }
+      .createadmin_date {
+        width: 100%;
+        @include flex-col;
+        .createadmin_date_label {
+          @include form_label;
+        }
+        .createadmin_date_input {
+          @include form_input;
+        }
+      }
+      .createadmin_car {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        @include flex-col;
+        .createadmin_car_label {
+          @include form_label;
+        }
+        .createadmin_car_input {
+          @include form_input;
+          appearance: none;
+          .placeholder {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            color: rgba(30, 30, 30, 0.44);
+          }
+        }
+      }
+    }
+    .createadmin_submit {
+      margin-bottom: 5rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      color: #f3f3f3;
+      padding: 1rem 3rem;
+      background: #df6951;
+      border-radius: 10px;
+    }
+  }
+}

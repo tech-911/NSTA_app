@@ -1,0 +1,61 @@
+.services_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  .services_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .services_text1 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      color: #5e6282;
+      margin-bottom: 0.5rem;
+    }
+    .services_text2 {
+      font-family: "Volkhov";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 64px;
+      text-align: center;
+      text-transform: capitalize;
+      color: #14183e;
+      margin-bottom: 4rem;
+      @media screen and (max-width: 670px) {
+        width: 60%;
+        font-size: 45px;
+      }
+    }
+  }
+  .services_widget {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    @media screen and (max-width: 1062px) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+    @media screen and (max-width: 1050px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: unset;
+    }
+  }
+  .service_design {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -20;
+  }
+}

@@ -1,0 +1,37 @@
+.widget_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 550px) {
+    padding: 1.5rem 3rem;
+  }
+  &:hover {
+    background: #ffffff;
+    box-shadow: 5px 4px 144px -40px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  .widget_img {
+  }
+  .widget_text1 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #1e1d4c;
+    margin-bottom: 0.5rem;
+  }
+  .widget_text2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    text-align: center;
+    color: #5e6282;
+  }
+}

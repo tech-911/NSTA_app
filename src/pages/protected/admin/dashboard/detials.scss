@@ -1,0 +1,189 @@
+@mixin text_label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+@mixin text_value {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 0.5rem;
+  // color: rgba(30, 30, 30, 0.8);
+  @media screen and (max-width: 600px) {
+    margin-left: unset;
+  }
+}
+@mixin text_align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+}
+@mixin button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.1rem 3rem 1.1rem;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+.detail_wrapper {
+  padding: 2rem;
+  .detail_back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    .detail_back_icon {
+      background: #ffffff;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.1s ease-in-out;
+      &:hover {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+      cursor: pointer;
+      .detail_back_icon1 {
+        font-size: 1.7rem;
+        color: rgba(30, 30, 30, 0.8);
+      }
+    }
+    .detial_back_text {
+      cursor: pointer;
+      margin-left: 1.5rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 34px;
+      color: rgba(30, 30, 30, 0.8);
+    }
+  }
+  .detial_widget {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    .detial_name {
+      @include text_align;
+      .detial_name_label {
+        @include text_label;
+      }
+      .detial_name_value {
+        @include text_value;
+      }
+    }
+    .detial_email {
+      @include text_align;
+      .detial_email_label {
+        @include text_label;
+      }
+      .detial_email_value {
+        @include text_value;
+        word-break: break-all;
+      }
+    }
+    .detial_date {
+      @include text_align;
+      .detial_date_label {
+        @include text_label;
+      }
+      .detial_date_value {
+        @include text_value;
+      }
+    }
+    .detial_time {
+      @include text_align;
+      .detial_time_label {
+        @include text_label;
+      }
+      .detial_time_value {
+        @include text_value;
+      }
+    }
+    .detial_status {
+      @include text_align;
+      .detial_status_label {
+        @include text_label;
+      }
+      .detial_status_value {
+        @include text_value;
+      }
+    }
+    .detial_no {
+      @include text_align;
+      .detial_no_label {
+        @include text_label;
+      }
+      .detial_no_value {
+        @include text_value;
+      }
+    }
+    .detial_destination {
+      @include text_align;
+      .detial_destination_label {
+        @include text_label;
+      }
+      .detial_destination_value {
+        @include text_value;
+      }
+    }
+    .detial_car {
+      @include text_align;
+      .detial_car_label {
+        @include text_label;
+      }
+      .detial_car_value {
+        @include text_value;
+      }
+    }
+    .detail_button {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .detail_button1 {
+        @include button;
+        background: #14a821;
+      }
+      .detail_button2 {
+        @include button;
+        background: #c71515;
+      }
+    }
+  }
+}

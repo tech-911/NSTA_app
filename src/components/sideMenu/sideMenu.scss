@@ -1,0 +1,74 @@
+@mixin LinkText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+@mixin LinkIcon {
+  color: rgba(223, 105, 81, 0.57);
+  font-size: 1.8rem;
+}
+@mixin Link {
+  padding: 1rem 1.5rem;
+}
+
+@mixin LinkHover {
+  background: #df6951;
+  border-radius: 10px;
+  // color: white;
+}
+.sideop_active {
+  @include LinkHover();
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.sideop_active_text {
+  color: white !important;
+}
+.sideop_active_icon {
+  .icon0,
+  .icon1,
+  .icon2,
+  .icon3 {
+    color: white !important;
+  }
+}
+.sideop_link {
+  @include Link;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    @include LinkHover;
+    .sideop_icon {
+      .icon0,
+      .icon1,
+      .icon2,
+      .icon3 {
+        color: white;
+      }
+    }
+    .sideop_name {
+      color: white;
+    }
+  }
+  .sideop_icon {
+    .icon0,
+    .icon1,
+    .icon2,
+    .icon3 {
+      @include LinkIcon();
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .sideop_name {
+    margin-left: 1rem;
+    @include LinkText;
+    transition: all 0.3s ease-in-out;
+  }
+}

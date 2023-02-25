@@ -1,0 +1,157 @@
+@mixin formlabelstyle {
+  font-family: "Volkhov";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+}
+@mixin forminputstyle {
+  background: #ffffff;
+  border: 1px solid #ef4136;
+  border-radius: 6px;
+  outline: #ef4136;
+  padding: 0.8rem 1rem;
+}
+@mixin labelinputalign {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login_wrapper {
+  position: relative;
+  height: 100vh;
+  .login_top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -12;
+  }
+  .login_header {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    @media screen and (max-width: 1062px) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+  .login_form_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    @media screen and (max-width: 1062px) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+    @media screen and (max-width: 1000px) {
+      align-items: center;
+      justify-content: center;
+      padding-top: 5rem;
+    }
+    .login_hero {
+      z-index: 0;
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
+    .login_form_wrap {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+
+      .login_form_header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .login_form_header_text1 {
+          font-family: "Volkhov";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 45px;
+          //   line-height: 187px;
+          color: #000000;
+        }
+        .login_form_header_text2_wrap {
+          display: flex;
+          flex-direction: row;
+          @media screen and (max-width: 480px) {
+            flex-direction: column;
+          }
+          .login_form_header_text2_item1 {
+            font-family: "Volkhov";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            // line-height: 80px;
+            color: #000000;
+          }
+          .login_form_header_text2_item2 {
+            font-family: "Volkhov";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            // line-height: 80px;
+            color: #df6951;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            @media screen and (max-width: 480px) {
+              margin-left: unset;
+            }
+          }
+        }
+      }
+      .login_form {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .login_form_email {
+          width: 100%;
+          margin-top: 1.5rem;
+          @include labelinputalign;
+          .login_form_email_label {
+            @include formlabelstyle;
+          }
+          .login_form_email_input {
+            @include forminputstyle;
+            width: 100%;
+          }
+        }
+        .login_form_password {
+          width: 100%;
+          margin-top: 1.5rem;
+          @include labelinputalign;
+          .login_form_password_label {
+            @include formlabelstyle;
+          }
+          .login_form_password_input {
+            @include forminputstyle;
+            width: 100%;
+          }
+        }
+        .login_button {
+          background: #df6951;
+          border: 1px solid #df6951;
+          border-radius: 6px;
+          font-family: "Volkhov";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          color: #ffffff;
+          padding: 0.8rem 0rem;
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+}

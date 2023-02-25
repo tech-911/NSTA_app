@@ -1,0 +1,116 @@
+.DeleteTask_close {
+  // display: none;
+  height: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.Delete_wrapper {
+  background-color: #7070705e;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .Delete_box {
+    @media screen and (max-width: 890px) {
+      width: 70vw;
+    }
+    @media screen and (max-width: 660px) {
+      width: 90vw;
+    }
+    @media screen and (min-width: 1183px) {
+      width: 40vw;
+    }
+    @media screen and (max-width: 400px) {
+      padding: 2.813rem 3rem !important;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.813rem 5rem;
+    background: #f9f7ff;
+    border-radius: 8px;
+    width: 50vw;
+    .Delete_head {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 160%;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 1.5rem;
+    }
+    .Delete_text {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 1.5rem;
+    }
+
+    .Delete_buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+      }
+      .Delete_button1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.875rem 1.5rem;
+        border: 1px solid #714dd9;
+        border-radius: 8px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 160%;
+        color: #714dd9;
+        background: #f9f7ff;
+        cursor: pointer;
+        width: 46%;
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+      .Delete_button2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.875rem 1.5rem;
+        background: #ff4d4f;
+        border-radius: 8px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 160%;
+        color: #fafafa;
+        border: 1px solid #f9f7ff;
+        cursor: pointer;
+        width: 46%;
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

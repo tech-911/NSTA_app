@@ -1,0 +1,72 @@
+.sidenav_open {
+  width: 60% !important;
+  padding: 2rem 1rem !important;
+  z-index: 100;
+}
+// .sidenav_close {
+//   width: 0px !important;
+//   overflow-x: hidden !important;
+//   padding: unset !important;
+// }
+.sidenav_close_button {
+  font-size: 1.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+  @media screen and (min-width: 850px) {
+    display: none;
+  }
+}
+.sidenav_logout_set {
+  display: flex !important;
+  z-index: 100;
+}
+.sidenav_logout_reset {
+}
+.sidenav_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 850px) {
+    width: 0px;
+    overflow-x: hidden;
+    padding: unset;
+  }
+  .sidenav_options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  .sidenav_logout {
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    .sidenav_logout_icon {
+      color: rgba(223, 105, 81, 0.57);
+      font-size: 1.8rem;
+    }
+    .sidenav_logout_text {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000;
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin form_label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(30, 30, 30, 0.8);
+  margin-bottom: 0.5rem;
+}
+@mixin form_input {
+  background: #dbd3d2;
+  border-radius: 10px;
+  padding: 1rem;
+  &:focus {
+    outline: 2px solid rgba(223, 105, 81, 0.57);
+  }
+  &::placeholder {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(30, 30, 30, 0.44);
+  }
+}
+
+.booking_wrapper {
+  // height: 100%;
+  padding: 2rem;
+  .booking_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgba(30, 30, 30, 0.8);
+    margin-bottom: 1.5rem
+  }
+  .booking_form {
+    @include flex-col;
+    .booking_name {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .booking_name_label {
+        @include form_label;
+      }
+      .booking_name_input {
+        @include form_input;
+      }
+    }
+    .booking_email {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .booking_email_label {
+        @include form_label;
+      }
+      .booking_email_input {
+        @include form_input;
+      }
+    }
+    .booking_destination {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .booking_destination_label {
+        @include form_label;
+      }
+      .booking_destination_input {
+        appearance: none;
+        @include form_input;
+        .placeholder {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          color: rgba(30, 30, 30, 0.44);
+        }
+      }
+    }
+    .booking_no {
+      margin-bottom: 1.2rem;
+      @include flex-col;
+      .booking_no_label {
+        @include form_label;
+      }
+      .booking_no_input {
+        @include form_input;
+      }
+    }
+    .booking_more_wrapper {
+      margin-bottom: 2rem;
+      @include flex-row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      @media screen and (max-width: 575px) {
+        @include flex-col;
+      }
+      .booking_time {
+        width: 100%;
+        @include flex-col;
+        .booking_time_label {
+          @include form_label;
+        }
+        .booking_time_input {
+          @include form_input;
+          width: 100%;
+        }
+      }
+      .booking_date {
+        width: 100%;
+        @include flex-col;
+        .booking_date_label {
+          @include form_label;
+        }
+        .booking_date_input {
+          @include form_input;
+          width: 100%;
+        }
+      }
+      .booking_car {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        @include flex-col;
+        .booking_car_label {
+          @include form_label;
+        }
+        .booking_car_input {
+          @include form_input;
+          appearance: none;
+          .placeholder {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            color: rgba(30, 30, 30, 0.44);
+          }
+        }
+      }
+    }
+    .booking_submit {
+      margin-bottom: 5rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      color: #f3f3f3;
+      padding: 1rem 3rem;
+      background: #df6951;
+      border-radius: 10px;
+    }
+  }
+}
