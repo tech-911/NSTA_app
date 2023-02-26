@@ -8,7 +8,7 @@ import emptyimg from "../../../../assets/png/empty.png";
 
 const Dashboard = () => {
   const { token } = useSelector((state) => state.login);
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
   const dispatch = useDispatch();
   const [data, setData] = useState(null);
   const [empty, setEmpty] = useState(null);

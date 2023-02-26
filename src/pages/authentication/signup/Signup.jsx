@@ -24,7 +24,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
-  const baseUrl = "https://ticketappbackend.vercel.app/api/user";
+  const baseUrl = "https://nsta-be.vercel.app/api/user";
 
   const handleSubmit = async (e) => {
     setDisable(1);

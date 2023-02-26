@@ -14,7 +14,7 @@ const Paystack = () => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
   const { token } = useSelector((state) => state.login);
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
   const { state } = useLocation();
   const { value } = state;
   const { _id } = value;

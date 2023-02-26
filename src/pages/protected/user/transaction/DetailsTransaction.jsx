@@ -30,7 +30,7 @@ const DetailsTransaction = () => {
     status,
   } = value;
   const { token } = useSelector((state) => state.login);
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
 
   const formatAMPM = (date) => {
     // date = new Date(date);

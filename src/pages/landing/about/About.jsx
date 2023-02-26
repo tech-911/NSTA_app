@@ -4,7 +4,7 @@ import "./about.scss";
 const About = () => {
   return (
     <div className="about_wrapper">
-      <div className="about_heading">About ticket xpress</div>
+      <div className="about_heading">About NSTA</div>
       <div className="about_body_wrap">
         <h1 className="about_left_text">
           Cheap and Affordable Tickets for your Vehicle Transport

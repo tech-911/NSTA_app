@@ -10,7 +10,7 @@ const Transaction = () => {
   const [pending, setPending] = useState([]);
   const [accepted, setAccepted] = useState([]);
   const [rejected, setRejected] = useState([]);
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
 
   useEffect(() => {
     // ================request for pending bookings=======================

@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <p className="footer_copyright">All rights reserved@ticketxpress.com</p>
+        <p className="footer_copyright">All rights reserved</p>
       </div>
     </div>
   );

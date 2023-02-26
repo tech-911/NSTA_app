@@ -24,7 +24,7 @@ const Login = () => {
   //calling dispatch hook to update login store
   const dispatch = useDispatch();
   //baseUrl
-  const baseUrl = "https://ticketappbackend.vercel.app/api/user";
+  const baseUrl = "https://nsta-be.vercel.app/api/user";
 
   //handle submit method
   const handleSubmit = async (e) => {

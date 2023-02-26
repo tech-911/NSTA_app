@@ -8,7 +8,7 @@ const History = () => {
   const { token } = useSelector((state) => state.login);
   const { user } = useSelector((state) => state.login);
   const [paid, setPaid] = useState([]);
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
 
   useEffect(() => {
     // ================request for paid bookings=======================

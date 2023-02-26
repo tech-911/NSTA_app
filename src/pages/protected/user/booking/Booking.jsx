@@ -22,7 +22,7 @@ const Booking = () => {
   const { _id } = user;
 
   //---------------Variables------------------------
-  const baseUrl = "https://ticketappbackend.vercel.app/api/useraction";
+  const baseUrl = "https://nsta-be.vercel.app/api/useraction";
 
   //---------------methods------------------------
   const handleSubmit = async (e) => {

@@ -16,7 +16,7 @@ const CreateAdmin = () => {
 
   //---------------Variables------------------------
   // const baseUrl = "http://localhost:4000/api/user";
-  const baseUrl = "https://ticketappbackend.vercel.app/api/user";
+  const baseUrl = "https://nsta-be.vercel.app/api/user";
 
   //---------------methods------------------------
   const handleSubmit = async (e) => {
