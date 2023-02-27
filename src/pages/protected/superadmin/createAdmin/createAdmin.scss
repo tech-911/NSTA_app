@@ -17,11 +17,13 @@
   margin-bottom: 0.5rem;
 }
 @mixin form_input {
-  background: #dbd3d2;
+  background: white;
   border-radius: 10px;
   padding: 1rem;
+  outline: 1px solid #02aae2;
+
   &:focus {
-    outline: 2px solid rgba(223, 105, 81, 0.57);
+    outline: 2px solid #02aae2;
   }
   &::placeholder {
     font-family: "Inter";
@@ -143,7 +145,7 @@
       font-size: 16px;
       color: #f3f3f3;
       padding: 1rem 3rem;
-      background: #df6951;
+      background: #02aae2;
       border-radius: 10px;
     }
   }
