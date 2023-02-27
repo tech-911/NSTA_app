@@ -9,6 +9,7 @@ const Table = ({ data, status, detailUrl }) => {
   const tablePending = status === "Pending" ? "table_pending" : "";
   const tableDeclined = status === "Rejected" ? "table_declined" : "";
   const tableAccepted = status === "Accepted" ? "table_accepted" : "";
+  const tablePaid = status === "Paid" ? "table_paid" : "";
 
   return (
     <div className="table_wrapper overflow-x-hidden">
@@ -130,7 +131,7 @@ const Table = ({ data, status, detailUrl }) => {
                     });
                   }}
                   key={id}
-                  className={`cursor-pointer grid gap-3 pt-4 table_item1 ${tableAccepted} ${tableDeclined} ${tablePending} border-b-2 border-[#6c99c411] pb-4`}
+                  className={`cursor-pointer grid gap-3 pt-4 table_item1 ${tableAccepted} ${tableDeclined} ${tablePending} ${tablePaid} border-b-2 border-[#6c99c411] pb-4`}
                 >
                   <p className="justify-self-start text-[#7e7d7d] col-span-3 ml-4">
                     {value.name}

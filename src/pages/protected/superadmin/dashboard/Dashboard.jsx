@@ -88,12 +88,12 @@ const Dashboard = () => {
 
       {empty?.length ? (
         <div className="bg-white rounded-md logs_widget relative overflow-x-hidden mb-[5rem]">
-          <p className="text-[#df6951] text-[25px] font-[inter] font-bold my-10 text-center logs_header_text_shadow">
+          <p className="text-[#02aae2] text-[25px] font-[inter] font-bold my-10 text-center logs_header_text_shadow">
             User Bookings Logs
           </p>
           <div className="logs_table mx-16 mb-20 overflow-x-scroll">
             <div className="grid gap-3 pb-8 logs_title border-b-2 border-[#6c99c411]">
-              <p className="text-[black] text-[16px] font-[inter] font-bold justify-self-start col-span-3">
+              <p className="text-[black] ml-2  text-[16px] font-[inter] font-bold justify-self-start col-span-3">
                 Name
               </p>
               <p className="text-[black] text-[16px] font-[inter] font-bold col-span-3">
@@ -122,7 +122,7 @@ const Dashboard = () => {
                     key={id}
                     className="cursor-pointer grid gap-3 pt-4 logs_item1 border-b-2 border-[#6c99c411] pb-4"
                   >
-                    <p className="justify-self-start text-[#7e7d7d] col-span-3">
+                    <p className=" ml-2 justify-self-start text-[#7e7d7d] col-span-3">
                       {value.name}
                     </p>
                     <p className="col-span-3 text-[#7e7d7d]">{value.date}</p>

@@ -7,9 +7,9 @@
 }
 @mixin forminputstyle {
   background: #ffffff;
-  border: 1px solid #ef4136;
+  border: 1px solid #02aae2;
   border-radius: 6px;
-  outline: #ef4136;
+  outline: #02aae2;
   padding: 0.8rem 1rem;
 }
 @mixin labelinputalign {
@@ -102,7 +102,7 @@
             font-weight: 400;
             font-size: 20px;
             // line-height: 80px;
-            color: #df6951;
+            color: #02aae2;
             margin-left: 0.5rem;
             cursor: pointer;
             @media screen and (max-width: 480px) {
@@ -141,8 +141,8 @@
           }
         }
         .login_button {
-          background: #df6951;
-          border: 1px solid #df6951;
+          background: #02aae2;
+          border: 1px solid #02aae2;
           border-radius: 6px;
           font-family: "Volkhov";
           font-style: normal;

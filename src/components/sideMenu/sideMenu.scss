@@ -7,7 +7,7 @@
   color: #000000;
 }
 @mixin LinkIcon {
-  color: rgba(223, 105, 81, 0.57);
+  color: #02aae2;
   font-size: 1.8rem;
 }
 @mixin Link {
@@ -15,7 +15,7 @@
 }
 
 @mixin LinkHover {
-  background: #df6951;
+  background: #02aae2;
   border-radius: 10px;
   // color: white;
 }

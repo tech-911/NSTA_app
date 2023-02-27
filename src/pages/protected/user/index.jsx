@@ -13,7 +13,7 @@ const Index = () => {
     <div className="user_wrapper">
       <Sidenav side={side} setSide={setSide} />
       <div className={`user_outlet ${side ? "blur-sm" : ""}`}>
-        <div className="user_nav border-b-[#df69513d] border-b-[1px]">
+        <div className="user_nav border-b-[#02aae22a] border-b-[1px]">
           <GiHamburgerMenu
             onClick={() => {
               setSide(!side);

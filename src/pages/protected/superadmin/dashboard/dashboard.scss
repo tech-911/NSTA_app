@@ -35,7 +35,7 @@
 }
 
 .logs_wrapper {
-   .superadmindashboard_head_title {
+  .superadmindashboard_head_title {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
@@ -107,11 +107,11 @@
         height: 10px;
       }
       &::-webkit-scrollbar-thumb {
-        background: #df69518c;
+        background: #02aae2;
         border-radius: 8px;
         border: 2px solid #e0e0e0;
         &:hover {
-          background-color: #df6951;
+          background-color: #02aae29c;
         }
       }
       .logs_title {
@@ -135,9 +135,9 @@
           grid-template-columns: repeat(11, minmax(0, 1fr));
           justify-items: center;
           &:hover {
-            background-color: #fcefec;
+            background-color: #c2e6f9;
             * {
-              color: #7e7d7db6;
+              color: #02aae2;
             }
           }
         }

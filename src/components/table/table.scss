@@ -76,6 +76,14 @@
             }
           }
         }
+        .table_paid {
+          &:hover {
+            background-color: #f6ddc5;
+            * {
+              color: #eea13d;
+            }
+          }
+        }
       }
     }
   }
