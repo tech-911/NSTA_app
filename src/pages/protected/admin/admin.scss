@@ -12,7 +12,7 @@
     width: 70%;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: #fcefec;
+    background-color: #02aae223;
     @media screen and (max-width: 850px) {
       width: 100%;
     }
@@ -24,7 +24,7 @@
       }
       .admin_hamburger {
         font-size: 2rem;
-        color: #df6951;
+        color: #02aae2;
         cursor: pointer;
         @media screen and (min-width: 851px) {
           display: none;
