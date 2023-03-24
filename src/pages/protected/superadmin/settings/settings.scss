@@ -1,8 +1,92 @@
-.superadminsetting_head_title {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  color: rgba(30, 30, 30, 0.8);
-  margin: 2rem;
+.superadminsetting_wrapper {
+  padding: 2rem;
+  .superadminsetting_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 0.8);
+    margin: 2rem 0rem 1rem;
+  }
+  @media screen and (min-width: 624px) {
+    .logs_table::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+
+  .logs_empty_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    .logs_empty_text {
+      margin-top: 1rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 160%;
+      color: #333333;
+      text-align: center;
+    }
+  }
+
+  .logs_widget {
+    box-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    flex-direction: column;
+    .logs_header_text_shadow {
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.47);
+    }
+    .logs_table {
+      @media screen and (max-width: 587px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      &::-webkit-scrollbar {
+        background: #e0e0e0;
+        border-radius: 8px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #02aae2;
+        border-radius: 8px;
+        border: 2px solid #e0e0e0;
+        &:hover {
+          background-color: #02aae29c;
+        }
+      }
+      .logs_title {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        justify-items: center;
+        width: 100%;
+        font-family: "Inter";
+        @media screen and (max-width: 926px) {
+          width: 500px;
+        }
+      }
+      .logs_content {
+        width: 100%;
+        @media screen and (max-width: 926px) {
+          width: 500px;
+        }
+        .logs_item1 {
+          * {
+            font-family: "Inter";
+          }
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          justify-items: center;
+          &:hover {
+            background-color: #c2e6f9;
+            * {
+              color: #02aae2;
+            }
+          }
+        }
+      }
+    }
+  }
 }

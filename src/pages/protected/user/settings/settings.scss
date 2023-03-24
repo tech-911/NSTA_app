@@ -1,8 +1,266 @@
-.usersetting_head_title {
+@mixin display_flex_row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin display_flex_column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin button_layout {
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  padding: 0.8rem 1.5rem;
+}
+@mixin button_label {
+  font-family: "Volkhov";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+}
+
+@mixin formlabelstyle {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   color: rgba(30, 30, 30, 0.8);
-  margin: 2rem;
+}
+@mixin forminputstyle {
+  background: #ffffff;
+  border: 1px solid #02aae2;
+  border-radius: 6px;
+  outline: #02aae2;
+  padding: 0.8rem 1rem;
+}
+@mixin labelinputalign {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.userSettings_wrapper {
+  @include display_flex_column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 5rem;
+  .usersetting_head_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 0.8);
+    margin: 2rem 0rem;
+  }
+  .userSettings_widget {
+    @include display_flex_column;
+    // padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #02aae2;
+    .userSettings_button1_wrapper {
+      @include display_flex_column;
+      .userSettings_password_edit_close {
+        height: 0px;
+        overflow: hidden;
+        padding: unset;
+      }
+      .userSettings_password_edit {
+        padding: 1rem;
+        .userSettings_password_form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .userSettings_oldpassword_name {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1.5rem;
+            @media screen and (max-width: 480px) {
+              flex-direction: column;
+            }
+            .userSettings_oldpassword_first_name {
+              @include labelinputalign;
+              width: 100%;
+              .userSettings_oldpassword_first_name_label {
+                @include formlabelstyle;
+              }
+              .userSettings_oldpassword_first_name_input {
+                @include forminputstyle;
+                width: 100%;
+              }
+            }
+          }
+          .userSettings_newpassword_name {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1.5rem;
+            @media screen and (max-width: 480px) {
+              flex-direction: column;
+            }
+            .userSettings_newpassword_first_name {
+              @include labelinputalign;
+              width: 100%;
+              .userSettings_newpassword_first_name_label {
+                @include formlabelstyle;
+              }
+              .userSettings_newpassword_first_name_input {
+                @include forminputstyle;
+                width: 100%;
+              }
+            }
+          }
+
+          .userSettings_password_button {
+            background: #02aae2;
+            border: 1px solid #02aae2;
+            border-radius: 6px;
+            font-family: "Volkhov";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color: #ffffff;
+            padding: 0.8rem 0rem;
+            margin-top: 2.5rem;
+          }
+        }
+      }
+      .userSettings_delete {
+        @include display_flex_row;
+        @media screen and (max-width: 360px) {
+          @include display_flex_column;
+        }
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #74dcff7e;
+        .userSettings_delete_text {
+          @include button_label;
+        }
+        .userSettings_delete_button {
+          @include button_layout;
+          // margin-left: 1rem;
+          background: rgba(248, 81, 70, 0.75);
+          border: 1px solid #af2b2f;
+          color: #8b1d20;
+          @media screen and (max-width: 360px) {
+            margin-top: 1rem;
+            width: 100%;
+          }
+        }
+      }
+      .userSettings_password {
+        @include display_flex_row;
+        @media screen and (max-width: 360px) {
+          @include display_flex_column;
+        }
+        align-items: center;
+        justify-content: space-between;
+        // border-bottom: 1px solid #74dcff7e;
+        padding: 1rem;
+        .userSettings_password_text {
+          @include button_label;
+        }
+        .userSettings_password_button {
+          @include button_layout;
+          // margin-left: 1rem;
+          background: #c2e6f9;
+          border: 1px solid #02aae2;
+          color: #3ebce6;
+          @media screen and (max-width: 360px) {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+      }
+      .userSettings_edit {
+        border-top: 1px solid #74dcff7e;
+        @include display_flex_row;
+        @media screen and (max-width: 360px) {
+          @include display_flex_column;
+        }
+        align-items: center;
+        justify-content: space-between;
+        // border-bottom: 1px solid #74dcff7e;
+        padding: 1rem;
+        .userSettings_edit_text {
+          @include button_label;
+        }
+        .userSettings_edit_button {
+          @include button_layout;
+          // margin-left: 1rem;
+          background: #c2e6f9;
+          border: 1px solid #02aae2;
+          color: #3ebce6;
+          @media screen and (max-width: 360px) {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    .userSettings_info_close {
+      height: 0px;
+      overflow: hidden;
+      padding: unset;
+    }
+    .userSettings_info {
+      padding: 1rem;
+      .userSettings_form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+        .userSettings_form_name {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 1.5rem;
+          @media screen and (max-width: 480px) {
+            flex-direction: column;
+          }
+          .userSettings_form_first_name {
+            @include labelinputalign;
+            width: 100%;
+            .userSettings_form_first_name_label {
+              @include formlabelstyle;
+            }
+            .userSettings_form_first_name_input {
+              @include forminputstyle;
+              width: 100%;
+            }
+          }
+        }
+        .userSettings_form_email {
+          width: 100%;
+          margin-top: 1.5rem;
+          @include labelinputalign;
+          .userSettings_form_email_label {
+            @include formlabelstyle;
+          }
+          .userSettings_form_email_input {
+            @include forminputstyle;
+            width: 100%;
+          }
+        }
+        .userSettings_button {
+          background: #02aae2;
+          border: 1px solid #02aae2;
+          border-radius: 6px;
+          font-family: "Volkhov";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          color: #ffffff;
+          padding: 0.8rem 0rem;
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
 }

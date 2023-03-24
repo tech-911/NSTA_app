@@ -33,8 +33,8 @@ const Landing = () => {
             NSTA, your all in one booking ticket.
           </h1>
           <p className="landing_hero_text3">
-            Our goal is to centralize tavel tech industry, and make ticket
-            bookings to your preffered location easily accessible fro thr
+            Our goal is to centralize travel tech industry, and make ticket
+            bookings to your preffered location easily accessible from the
             comfort of your home.
           </p>
           <button

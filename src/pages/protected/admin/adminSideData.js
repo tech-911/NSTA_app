@@ -14,10 +14,10 @@ export const adminSideData = [
     icon: <MdPayments className="icon2" />,
     link: "/admin/history",
   },
-  {
-    id: 2,
-    name: "Settings",
-    icon: <FiSettings className="icon3" />,
-    link: "/admin/settings",
-  },
+  // {
+  //   id: 2,
+  //   name: "Settings",
+  //   icon: <FiSettings className="icon3" />,
+  //   link: "/admin/settings",
+  // },
 ];
