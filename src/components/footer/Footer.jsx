@@ -18,14 +18,14 @@ const Footer = () => {
             <ul className="footer_items1_wrap">
               <li className="footer_item1">Company</li>
               <li className="footer_item2">About</li>
-              <li className="footer_item3">Carrer</li>
+              <li className="footer_item3">Career</li>
               <li className="footer_item4">Mobile</li>
             </ul>
             <ul className="footer_items2_wrap">
               <li className="footer_item1">Contact</li>
               <li className="footer_item2">Help/FAQ</li>
               <li className="footer_item3">Press</li>
-              <li className="footer_item4">Affilate</li>
+              <li className="footer_item4">Affiliate</li>
             </ul>
             <ul className="footer_items3_wrap">
               <li className="footer_item1">More</li>

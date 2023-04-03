@@ -14,7 +14,7 @@ export const serviceData = [
     id: 1,
     img: bus,
     text1: "Book Bus",
-    text2: "You can bbok your bus tickets with us for your trip.",
+    text2: "You can book your bus tickets with us for your trip.",
   },
   {
     id: 2,
