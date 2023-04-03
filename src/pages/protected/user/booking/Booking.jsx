@@ -70,6 +70,7 @@ const Booking = () => {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
     setData(newData);
+    console.log(newData);
   };
 
   let { name, email, destination, passangers_number, time, date, car_type } =
@@ -142,43 +143,56 @@ const Booking = () => {
             <option className="placeholder" value="" defaultValue={true}>
               Select Destination
             </option>
-            <option value="Abia - ₦5000">Abia - ₦5000</option>
-            <option value="Adamawa - ₦5000">Adamawa - ₦5000</option>
-            <option value="AkwaIbom - ₦5000">AkwaIbom - ₦5000</option>
-            <option value="Anambra - ₦5000">Anambra - ₦5000</option>
+            {/* <option value="Abia - ₦5000">Abia - ₦5000</option> */}
+            {/* <option value="Adamawa - ₦5000">Adamawa - ₦5000</option> */}
+            {/* <option value="AkwaIbom - ₦5000">AkwaIbom - ₦5000</option> */}
+            {/* <option value="Anambra - ₦5000">Anambra - ₦5000</option> */}
             <option value="Bauchi - ₦4500">Bauchi - ₦4500</option>
             <option value="Bayelsa - ₦5000">Bayelsa - ₦5000</option>
             <option value="Benue - ₦5000">Benue - ₦5000</option>
             <option value="Borno - ₦5000">Borno - ₦5000</option>
-            <option value="Cross River - ₦5000">Cross River - ₦5000</option>
-            <option value="Delta - ₦5000">Delta - ₦5000</option>
-            <option value="Ebonyi - ₦5000">Ebonyi - ₦5000</option>
-            <option value="Edo - ₦5000">Edo - ₦5000</option>
-            <option value="Ekiti - ₦5000">Ekiti - ₦5000</option>
-            <option value="Enugu - ₦5000">Enugu - ₦5000</option>
+            {/* <option value="Cross River - ₦5000">Cross River - ₦5000</option> */}
+            {/* <option value="Delta - ₦5000">Delta - ₦5000</option> */}
+            {/* <option value="Ebonyi - ₦5000">Ebonyi - ₦5000</option> */}
+            {/* <option value="Edo - ₦5000">Edo - ₦5000</option> */}
+            {/* <option value="Ekiti - ₦5000">Ekiti - ₦5000</option> */}
+            {/* <option value="Enugu - ₦5000">Enugu - ₦5000</option> */}
             <option value="FCT - ₦2500">FCT - ₦2500</option>
             <option value="Gombe - ₦6000">Gombe - ₦6000</option>
-            <option value="Imo - ₦5000">Imo - ₦5000</option>
-            <option value="Jigawa - ₦5000">Jigawa - ₦5000</option>
+            {/* <option value="Imo - ₦5000">Imo - ₦5000</option> */}
+            {/* <option value="Jigawa - ₦5000">Jigawa - ₦5000</option> */}
             <option value="Kaduna - ₦5000">Kaduna - ₦5000</option>
             <option value="Kano - ₦4500">Kano - ₦4500</option>
             <option value="Katsina - ₦5000">Katsina - ₦5000</option>
-            <option value="Kebbi - ₦5000">Kebbi - ₦5000</option>
+            {/* <option value="Kebbi - ₦5000">Kebbi - ₦5000</option> */}
             <option value="Kogi - ₦4000">Kogi - ₦4000</option>
             <option value="Kwara - ₦5000">Kwara - ₦5000</option>
             <option value="Lagos - ₦7000">Lagos - ₦7000</option>
-            <option value="Nasarawa - ₦5000">Nasarawa - ₦5000</option>
-            <option value="Niger - ₦5000">Niger - ₦5000</option>
-            <option value="Ogun - ₦5000">Ogun - ₦5000</option>
-            <option value="Ondo - ₦5000">Ondo - ₦5000</option>
-            <option value="Osun - ₦5000">Osun - ₦5000</option>
-            <option value="Oyo - ₦5000">Oyo - ₦5000</option>
+            {/* <option value="Nasarawa - ₦5000">Nasarawa - ₦5000</option> */}
+            {/* <option value="Niger - ₦5000">Niger - ₦5000</option> */}
+            {/* <option value="Ogun - ₦5000">Ogun - ₦5000</option> */}
+            {/* <option value="Ondo - ₦5000">Ondo - ₦5000</option> */}
+            {/* <option value="Osun - ₦5000">Osun - ₦5000</option> */}
+            {/* <option value="Oyo - ₦5000">Oyo - ₦5000</option> */}
             <option value="Plateau - ₦5000">Plateau - ₦5000</option>
-            <option value="Rivers - ₦5000">Rivers - ₦5000</option>
+            {/* <option value="Rivers - ₦5000">Rivers - ₦5000</option> */}
             <option value="Sokoto - ₦5000">Sokoto - ₦5000</option>
-            <option value="Taraba - ₦5000">Taraba - ₦5000</option>
-            <option value="Yobe - ₦5000">Yobe - ₦5000</option>
-            <option value="Zamfara - ₦4500">Zamfara - ₦4500</option>
+            {/* <option value="Taraba - ₦5000">Taraba - ₦5000</option> */}
+            {/* <option value="Yobe - ₦5000">Yobe - ₦5000</option> */}
+            {/* <option value="Zamfara - ₦4500">Zamfara - ₦4500</option> */}
+            <option value="Suleja - ₦600">Suleja - ₦600</option>
+            <option value="Katan-Gora - ₦1200">Katan-Gora - ₦1200</option>
+            <option value="Bida - ₦800">Bida - ₦800</option>
+            <option value="Mokwa - ₦1700">Mokwa - ₦1700</option>
+            <option value="New Busau - ₦2000">New Busau - ₦2000</option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
+            <option value="" disabled></option>
           </select>
         </div>
         <div className="booking_no">
